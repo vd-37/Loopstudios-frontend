@@ -1,0 +1,255 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+*{  
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+p{
+    font-size: 15px;
+}
+
+.padding{
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.navbar,.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.home{
+    display: flex;
+    padding-top: 3em;
+    min-height: 65vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url(images/desktop/image-hero.jpg);
+    background-size: cover;
+}
+.nav-item{
+    padding-right: 1.5em;
+}
+.underline{
+    color: white;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+.underline:hover{
+    color: white;
+    text-decoration: none;
+}
+.underline:after {   
+     /*remove comments if error occurs , no effect as of now.*/
+    /* background: none repeat scroll 0 0 transparent; */
+    bottom: 0;
+    content: "";
+    /* display: block; */
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.underline:hover:after { 
+    width: 60%; 
+    left: 20%;
+    right: 20%; 
+}
+.home-box{
+    margin-top: 5%;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    border: 2px solid white;
+    padding-left: 2em;
+    padding-top: 1em;  
+    padding-right: 0.5em; 
+}
+h1{
+    line-height: 1.1;
+    font-size: 3rem;
+}
+
+/* About section */
+
+.about-content{
+    margin-top: 6em;
+    margin-bottom: 6em;
+    display: flex;
+    position: relative;
+}
+.left-column{
+    flex-basis: 60%;
+}
+.mobile-interactive{
+    height:100%;
+    width: 115%;
+}
+.right-column{
+    position: absolute;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 55%;
+    flex-basis: 50%;
+    padding: 3.5em 10em 0 3.5em;
+}
+.right-column h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-bottom: 0.5em;
+}
+.right-column p{
+    color: gray;
+    font-family: 'Alata', sans-serif;
+    font-size: 110%;
+}
+/* creation section*/
+.creation{
+    margin-bottom: 6rem;
+}
+.creation-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+.creation-heading h2{
+    text-transform: uppercase;
+}
+
+.creation-heading .btn{
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 0;
+    
+}
+.creation-heading a{
+    font-family: 'Alata';
+    color: black;
+    font-size: 95%;
+    padding: 0.8em 2em;
+    letter-spacing: 3px;
+}
+.creation-heading a:hover{
+    background-color: black;
+    color: white;
+}
+.grid-image{
+    width: 90%;
+    height: 25rem;
+}
+.grid-image:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.creation-grid{
+    display: grid;
+    grid-template-columns: repeat(4,25.67%);
+}
+.images{
+    position: relative;
+    padding-bottom: 2rem;
+}
+.images h3{
+    background-color: rgba(0,0,0,0.5);
+    width: 90%;
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    padding: 0.5em;
+    color: white;
+    text-transform: uppercase;
+}
+.mobile-btn{
+    display: none;
+}
+/* Footer */
+footer{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    background-color: black;
+}
+.left-footer{
+    flex-basis: 50%;
+}
+.left-footer img{
+    padding-bottom: 1.5em;
+}
+.left-footer a{
+    padding-right: 0.8em;
+}
+.right-footer{
+    color: gray;
+    flex-basis: 50%;
+    text-align: right;
+}
+.social-media{
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
+}
+.attribution{
+    font-size: .8rem;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+.attribution a{
+    color: rgb(248, 166, 166);
+}
+/* Media Queries */
+@media (max-width: 1024px){
+    /* Home section */
+    .padding{
+        padding-left: 7em;
+        padding-right: 7em;
+    }
+    .home{
+        min-height: 50vh;
+        background-position: right;
+    }
+    .home-box{
+        height: 40%;
+        padding-top: 0;
+        margin-top: 15%;
+        width: 65%;
+    }
+    h1{
+        line-height: 1.2;
+        font-size: 3.5rem;
+    }
+    /* About section */
+    .right-column{
+        font-size: 85%;
+        width: 55%;
+        padding-top: 2.5em ;
+        padding-left: 2.5em;
+    }
+    .right-column h2{
+        font-size: 2.5rem;
+        padding-bottom: 0.3em;
+    }
+    /* creation section */
+    .grid-image{
+        height: 20rem;
+    }
+}
+@media (max-width:992px)  {
+    .home{
+        min-height: 65vh;
+    }
+    .home-box{
+        margin-top: 5%;
+        height: 40%;
+        width: 70%;
+    }
+    h1{
+       font-size:  2rem;
+    }
+}
